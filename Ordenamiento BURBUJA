@@ -1,0 +1,14 @@
+def bubblesort(lista):
+    for j in range(len(lista)-1):
+        for i in range(len(lista)-1):
+            if lista[i]>lista[i+1]:
+                temp = lista[i]
+                lista[i] = lista[i+1]
+                lista[i+1] = temp 
+                
+def main():
+    A1=[8,4,3,7,9,1,2,5,6]
+    bubblesort(A1)
+    print(A1)
+                
+main()
