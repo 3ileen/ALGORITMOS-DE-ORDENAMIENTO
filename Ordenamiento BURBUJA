@@ -5,10 +5,4 @@ def bubblesort(lista):
                 temp = lista[i]
                 lista[i] = lista[i+1]
                 lista[i+1] = temp 
-                
-def main():
-    A1=[8,4,3,7,9,1,2,5,6]
-    bubblesort(A1)
-    print(A1)
-                
-main()
+    return lista
