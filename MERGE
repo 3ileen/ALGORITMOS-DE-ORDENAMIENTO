@@ -1,0 +1,27 @@
+def merge(lista):
+    if len(lista)>1:
+        mitad=len(lista)//2
+        primera_mitad=lista[:mitad]
+        segunda_mistad=lista[mitad:]
+        merge(primera_mitad)
+        merge(segunda_mistad)
+        i=0
+        j=0
+        k=0
+        while i <len(primera_mitad) and j<len(segunda_mistad):
+            if primera_mitad[i]<segunda_mistad[j]:
+                lista[k]=primera_mitad[i]
+                i+=1
+            else:
+                lista[k]=segunda_mistad[j]
+                j+=1
+            k+=1    
+        while i <len(primera_mitad):
+            lista[k]=primera_mitad[i]
+            i+=1
+            k+=1
+        while j < len(segunda_mistad):
+            lista[k]=segunda_mistad[j]
+            j+=1
+            k+=1
+    return lista
